@@ -4,12 +4,16 @@
     <title>Meshiterro</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viweport" content="width=device-width", initaial-scale=1, maximum-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-columu vh-100">
+    <heder class="shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light">
+
     <% if user_signed_in? %>
       <li>
         <%= link_to '投稿フォーム', new_post_image_path %>
@@ -20,7 +24,7 @@
       <li>
         <%= link_to 'マイページ', user_path(current_user.id) %>
       </li>
-      
+
     <% else %>
       <li>
         <%= link_to "新規登録", new_user_registration_path %>
