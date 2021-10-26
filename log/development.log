@@ -4161,3 +4161,283 @@ Started GET "/attachments/65fcaac1bf067cc38a887a0d1be97b8c85cf1c0a/store/f0ff89c
 Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2021-10-25 13:43:54 +0000] GET "/65fcaac1bf067cc38a887a0d1be97b8c85cf1c0a/store/f0ff89c16b83c5bdc5bdf2e8ba09d781db823199de0fb9571d6d27863c25/image" 200 40.5ms
 
+Started GET "/" for 60.112.126.23 at 2021-10-26 09:36:21 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4261ms (Views: 4250.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 09:36:27 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 132ms (Views: 130.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 60.112.126.23 at 2021-10-26 09:36:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."user_id" = ? ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/post_images/_list.html.erb:1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_comments" WHERE "post_comments"."post_image_id" = ?[0m  [["post_image_id", 9]]
+  ↳ app/views/post_images/_list.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_comments" WHERE "post_comments"."post_image_id" = ?[0m  [["post_image_id", 8]]
+  ↳ app/views/post_images/_list.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_comments" WHERE "post_comments"."post_image_id" = ?[0m  [["post_image_id", 7]]
+  ↳ app/views/post_images/_list.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_comments" WHERE "post_comments"."post_image_id" = ?[0m  [["post_image_id", 6]]
+  ↳ app/views/post_images/_list.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_comments" WHERE "post_comments"."post_image_id" = ?[0m  [["post_image_id", 5]]
+  ↳ app/views/post_images/_list.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_images" WHERE "post_images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/post_images/_list.html.erb:16
+  Rendered post_images/_list.html.erb (91.9ms)
+  Rendered users/show.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 241ms (Views: 195.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/attachments/57891a731313ce9c2eef18428f8e682cc38159b2/store/043d7304775aa2c69a7022025859bba1917d5fa490802ed94b430cc2287c/image" for 60.112.126.23 at 2021-10-26 09:36:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/65fcaac1bf067cc38a887a0d1be97b8c85cf1c0a/store/f0ff89c16b83c5bdc5bdf2e8ba09d781db823199de0fb9571d6d27863c25/image" for 60.112.126.23 at 2021-10-26 09:36:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/06bba30a93627f49b7cc4075e3d2ba1cf1fa941a/store/acb4d2f6730e2eaa72dba8bdb5f214b54ecff58074f2394d137a8083321f/image" for 60.112.126.23 at 2021-10-26 09:36:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/3aeb02055c78f3d5ea7cb25dc3e834b7093e472d/store/c3b2e113ce7cc818b4e5e563c964f9999a7b58f0020efd7b17ab21cbe936/image" for 60.112.126.23 at 2021-10-26 09:36:32 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-26 09:36:32 +0000] GET "/06bba30a93627f49b7cc4075e3d2ba1cf1fa941a/store/acb4d2f6730e2eaa72dba8bdb5f214b54ecff58074f2394d137a8083321f/image" 200 11.3ms
+
+Refile::App: [2021-10-26 09:36:32 +0000] GET "/3aeb02055c78f3d5ea7cb25dc3e834b7093e472d/store/c3b2e113ce7cc818b4e5e563c964f9999a7b58f0020efd7b17ab21cbe936/image" 200 10.7ms
+
+Refile::App: [2021-10-26 09:36:32 +0000] GET "/57891a731313ce9c2eef18428f8e682cc38159b2/store/043d7304775aa2c69a7022025859bba1917d5fa490802ed94b430cc2287c/image" 200 24.2ms
+
+Refile::App: [2021-10-26 09:36:32 +0000] GET "/65fcaac1bf067cc38a887a0d1be97b8c85cf1c0a/store/f0ff89c16b83c5bdc5bdf2e8ba09d781db823199de0fb9571d6d27863c25/image" 200 27.4ms
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 12:58:06 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 963ms (Views: 885.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 12:58:08 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 12:59:44 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 555ms (Views: 546.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 12:59:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:01:51 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 575ms (Views: 566.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:02:09 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:06:45 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 587ms (Views: 578.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:06:47 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:10:19 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:32: syntax error, unexpected '<', expecting ')'
+            </li>
+            ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:36: unknown regexp option - l
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:37: syntax error, unexpected '<'
+            <li class="nav-item">
+            ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:39: syntax error, unexpected '<', expecting ')'
+            </li>
+            ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:41: unknown regexp option - l
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+          </div>
+          ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:43: unknown regexp options - dv
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+      </nav>
+      ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:45: unknown regexp options - hadr
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+    <main class="mb-auto">
+    ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:48: syntax error, unexpected '<', expecting ')'
+    </main>
+    ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:55: unknown regexp options - dv
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:56: syntax error, unexpected '<'
+          <div class="col-md-8">
+          ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+            <h6 class="text-white mt-2 mb-...
+            ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:60: unknown regexp option - a
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:61: syntax error, unexpected '<'
+              </li>
+              ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:63: unknown regexp option - a
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+              </li>
+              ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:65: unknown regexp option - l
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+          </div>
+          ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:67: unknown regexp options - dv
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+      </div>
+      ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:69: unknown regexp options - ftr
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+  </body>
+  ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:71: unknown regexp options - htl
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:76: unterminated string meets end of file
+          end
+              ^
+/home/ec2-user/environment/meshiterro/app/views/layouts/application.html.erb:76: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: unknown regexp option - l
+app/views/layouts/application.html.erb:37: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:39: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:41: unknown regexp option - l
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - dv
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:45: unknown regexp options - hadr
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:55: unknown regexp options - dv
+app/views/layouts/application.html.erb:56: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:60: unknown regexp option - a
+app/views/layouts/application.html.erb:61: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:63: unknown regexp option - a
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:65: unknown regexp option - l
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp options - dv
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp options - ftr
+app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:71: unknown regexp options - htl
+app/views/layouts/application.html.erb:76: unterminated string meets end of file
+app/views/layouts/application.html.erb:76: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:10:50 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 530ms (Views: 522.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 13:10:52 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 89ms (Views: 86.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 14:06:04 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1164ms (Views: 1152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.112.126.23 at 2021-10-26 14:06:07 +0000
+Cannot render console from 60.112.126.23! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+Completed 200 OK in 121ms (Views: 117.1ms | ActiveRecord: 0.8ms)
+
+
